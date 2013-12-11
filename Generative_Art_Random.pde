@@ -16,3 +16,12 @@ void setup() {
     }
   }
 }
+
+// draw points
+void drawPoint(float x, float y, float noiseFactor) {
+  pushMatrix();
+  translate(x * noiseFactor * 4, y * noiseFactor * 4, -y);
+  float edgeSize = noiseFactor * 26;
+  ellipse(0, 0, edgeSize, edgeSize);
+  popMatrix();
+}
